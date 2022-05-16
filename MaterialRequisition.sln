@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialRequisition", "MaterialRequisition\MaterialRequisition.csproj", "{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialRequisition.Application", "MaterialRequisition.Application\MaterialRequisition.Application.csproj", "{2D540FAA-E182-4D3F-83BA-04254C519E86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialRequisition.Persistence", "MaterialRequisition.Persistence\MaterialRequisition.Persistence.csproj", "{6675130A-0D31-4B39-AB9F-6D89F3F6135A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialRequisition.DAL", "MaterialRequisition.DAL\MaterialRequisition.DAL.csproj", "{92EA8B66-E8EA-45F4-B870-45E32A2C73E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layer", "Presentation Layer", "{17755DED-63A8-4885-A228-E322858CE2E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core Layer", "Core Layer", "{085B3413-68F4-4108-B95A-C25F05BCF89C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence Layer", "Persistence Layer", "{CEC4ACCC-147A-4CB3-AD9B-7AA3F63BE472}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6810CA60-6594-45F9-A603-529B57148E3E}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Logic Layer", "Business Logic Layer", "{FBB17685-F808-4F8A-A2DE-8B55B81A69C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialRequisition.Business", "MaterialRequisition.Business\MaterialRequisition.Business.csproj", "{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialRequisition.WindowsService", "MaterialRequisition.WindowsService\MaterialRequisition.WindowsService.csproj", "{0EF09FDD-2370-47C9-B636-E84BEF71EE47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D540FAA-E182-4D3F-83BA-04254C519E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D540FAA-E182-4D3F-83BA-04254C519E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D540FAA-E182-4D3F-83BA-04254C519E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D540FAA-E182-4D3F-83BA-04254C519E86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6675130A-0D31-4B39-AB9F-6D89F3F6135A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6675130A-0D31-4B39-AB9F-6D89F3F6135A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6675130A-0D31-4B39-AB9F-6D89F3F6135A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6675130A-0D31-4B39-AB9F-6D89F3F6135A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92EA8B66-E8EA-45F4-B870-45E32A2C73E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EA8B66-E8EA-45F4-B870-45E32A2C73E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EA8B66-E8EA-45F4-B870-45E32A2C73E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EA8B66-E8EA-45F4-B870-45E32A2C73E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EF09FDD-2370-47C9-B636-E84BEF71EE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF09FDD-2370-47C9-B636-E84BEF71EE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF09FDD-2370-47C9-B636-E84BEF71EE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF09FDD-2370-47C9-B636-E84BEF71EE47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC5A0379-88C4-438A-AC8C-9F7B88E99B8B} = {17755DED-63A8-4885-A228-E322858CE2E0}
+		{2D540FAA-E182-4D3F-83BA-04254C519E86} = {085B3413-68F4-4108-B95A-C25F05BCF89C}
+		{6675130A-0D31-4B39-AB9F-6D89F3F6135A} = {CEC4ACCC-147A-4CB3-AD9B-7AA3F63BE472}
+		{92EA8B66-E8EA-45F4-B870-45E32A2C73E9} = {085B3413-68F4-4108-B95A-C25F05BCF89C}
+		{97C92BE5-DA07-4F68-AAC7-20F9847A0A5C} = {FBB17685-F808-4F8A-A2DE-8B55B81A69C3}
+		{0EF09FDD-2370-47C9-B636-E84BEF71EE47} = {17755DED-63A8-4885-A228-E322858CE2E0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10E7A626-9E35-454C-8C07-7248A1FDEEF7}
+	EndGlobalSection
+EndGlobal

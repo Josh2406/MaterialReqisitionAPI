@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bc5a0379-88c4-438a-ac8c-9f7b88e99b8b": {
+      "ProjectGuid": "bc5a0379-88c4-438a-ac8c-9f7b88e99b8b",
+      "DisplayName": "MaterialRequisition",
+      "ColorIndex": 0
+    },
+    "2d540faa-e182-4d3f-83ba-04254c519e86": {
+      "ProjectGuid": "2d540faa-e182-4d3f-83ba-04254c519e86",
+      "DisplayName": "MaterialRequisition.Application",
+      "ColorIndex": 1
+    },
+    "6675130a-0d31-4b39-ab9f-6d89f3f6135a": {
+      "ProjectGuid": "6675130a-0d31-4b39-ab9f-6d89f3f6135a",
+      "DisplayName": "MaterialRequisition.Persistence",
+      "ColorIndex": 2
+    },
+    "92ea8b66-e8ea-45f4-b870-45e32a2c73e9": {
+      "ProjectGuid": "92ea8b66-e8ea-45f4-b870-45e32a2c73e9",
+      "DisplayName": "MaterialRequisition.DAL",
+      "ColorIndex": 3
+    },
+    "4b2e7397-07c2-493b-9676-d41f9ad7afcd": {
+      "ProjectGuid": "4b2e7397-07c2-493b-9676-d41f9ad7afcd",
+      "DisplayName": "MaterialRequisition.Service",
+      "ColorIndex": 4
+    },
+    "97c92be5-da07-4f68-aac7-20f9847a0a5c": {
+      "ProjectGuid": "97c92be5-da07-4f68-aac7-20f9847a0a5c",
+      "DisplayName": "MaterialRequisition.Business",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

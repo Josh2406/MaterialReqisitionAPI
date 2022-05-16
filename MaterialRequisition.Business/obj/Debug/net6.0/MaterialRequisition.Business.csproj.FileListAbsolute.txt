@@ -1,0 +1,12 @@
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\bin\Debug\net6.0\MaterialRequisition.Business.deps.json
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\bin\Debug\net6.0\MaterialRequisition.Business.dll
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\bin\Debug\net6.0\ref\MaterialRequisition.Business.dll
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\bin\Debug\net6.0\MaterialRequisition.Business.pdb
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.csproj.AssemblyReference.cache
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.AssemblyInfoInputs.cache
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.AssemblyInfo.cs
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.csproj.CoreCompileInputs.cache
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.dll
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\ref\MaterialRequisition.Business.dll
+C:\Users\Joshua.Ajibade\source\repos\MaterialRequisition\MaterialRequisition.Business\obj\Debug\net6.0\MaterialRequisition.Business.pdb

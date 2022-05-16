@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MaterialRequisition.WindowsService/1.0.0": {
+        "runtime": {
+          "MaterialRequisition.WindowsService.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MaterialRequisition.WindowsService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
