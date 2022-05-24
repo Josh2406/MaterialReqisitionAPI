@@ -30,7 +30,12 @@
       "ProjectGuid": "97c92be5-da07-4f68-aac7-20f9847a0a5c",
       "DisplayName": "MaterialRequisition.Business",
       "ColorIndex": 5
+    },
+    "0ef09fdd-2370-47c9-b636-e84bef71ee47": {
+      "ProjectGuid": "0ef09fdd-2370-47c9-b636-e84bef71ee47",
+      "DisplayName": "MaterialRequisition.WindowsService",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

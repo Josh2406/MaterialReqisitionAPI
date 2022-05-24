@@ -9,10 +9,10 @@ namespace MaterialRequisition.DAL.Entities
         public long Id { get; set; }
         public long RequsitionId { get; set; }
         public string Status { get; set; }
+
         [Required, StringLength(100)]
-        public string StatusReason { get; set; }
-        [StringLength(200)]
-        public string FurtherAction { get; set; }
+        public string Description { get; set; }
+
         public bool IsActive { get; set; }
         public DateTime Date { get; set; }
 
