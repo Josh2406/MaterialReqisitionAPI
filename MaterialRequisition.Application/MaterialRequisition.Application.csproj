@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Constants\" />
     <Folder Include="Enums\" />
   </ItemGroup>
 

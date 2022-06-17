@@ -1,4 +1,14 @@
+﻿using AutoMapper;
+using MaterialRequisition.Business.Automapper;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var config = new MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new GeneralProfile());
+});
+var mapper = config.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

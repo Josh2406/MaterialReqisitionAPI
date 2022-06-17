@@ -10,6 +10,9 @@ namespace MaterialRequisition.DAL.Entities
         public int RoleId { get; set; }
         public int? CreatorId { get; set; }
 
+        [Required, StringLength(100)]
+        public string Name { get; set; }
+
         [Required, StringLength(50)]
         public string EntityName { get; set; }
 

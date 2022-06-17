@@ -34,8 +34,8 @@ namespace MaterialRequisition.Persistence.Repository
             return await _dbContext.Set<T>().AsNoTracking().ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null, 
-            Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null, string includeProperties = "")
+        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> filter = null, 
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = "")
         {
             IQueryable<T> query = _dbContext.Set<T>();
             if (filter != null)

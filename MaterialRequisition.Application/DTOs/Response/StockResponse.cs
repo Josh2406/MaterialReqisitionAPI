@@ -1,5 +1,9 @@
 ﻿namespace MaterialRequisition.Application.DTOs.Response
 {
+    /// <summary>
+    /// Response DTO for StockResponse entity <br/>
+    /// [<b>Configured for automapping</b>]
+    /// </summary>
     public class StockResponse
     {
         public int Id { get; set; }

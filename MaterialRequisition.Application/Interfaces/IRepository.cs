@@ -6,8 +6,8 @@ namespace MaterialRequisition.Application.Interfaces
     {
         Task<T> GetByIdAsync(long id);
 
-        Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>>? filter = null,
-            Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+        Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "");
 
         Task<IEnumerable<T>> GetAllAsync();

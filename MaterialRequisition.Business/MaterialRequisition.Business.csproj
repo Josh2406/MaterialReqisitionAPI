@@ -3,7 +3,21 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.19.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NLog" Version="5.0.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.19.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MaterialRequisition.Application\MaterialRequisition.Application.csproj" />
+    <ProjectReference Include="..\MaterialRequisition.DAL\MaterialRequisition.DAL.csproj" />
+    <ProjectReference Include="..\MaterialRequisition.Persistence\MaterialRequisition.Persistence.csproj" />
+  </ItemGroup>
 
 </Project>

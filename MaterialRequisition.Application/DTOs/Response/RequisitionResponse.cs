@@ -12,13 +12,6 @@
         public DateTime? DateApproved { get; set; }
         public DateTime? Rejected { get; set; }
         public DateTime? ReleaseDate { get; set; }
-        public List<RequisitionResponseItem> Items { get; set; }
-    }
-
-    public class RequisitionResponseItem 
-    {
-        public long Id { get; set; }
-        public string ItemName { get; set; }
-        public int Quantity { get; set; }
+        public List<RequisitionItemResponse> Items { get; set; }
     }
 }

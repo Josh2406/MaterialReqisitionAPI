@@ -1,5 +1,9 @@
 ﻿namespace MaterialRequisition.Application.DTOs.Response
 {
+    /// <summary>
+    /// Response DTO for InventoryCategory entity <br/>
+    /// [<b>Configured for automapping</b>]
+    /// </summary>
     public class InventoryCategoryResponse
     {
         public int Id { get; set; }

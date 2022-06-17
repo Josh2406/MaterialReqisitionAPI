@@ -1,5 +1,9 @@
 ﻿namespace MaterialRequisition.Application.DTOs.Response
 {
+    /// <summary>
+    /// Response DTO for Role entity <br/>
+    /// [<b>Configured for automapping</b>]
+    /// </summary>
     public class RoleResponse
     {
         public int Id { get; set; }
