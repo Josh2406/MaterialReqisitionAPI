@@ -4,9 +4,9 @@
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public int? CreatorId { get; set; }
+        public int? CreatedById { get; set; }
         public string ParentUnit { get; set; }
-        public string CreatedBy { get; set; }
+        public string CreatedByUser { get; set; }
         public string UnitCode { get; set; }
         public string UnitName { get; set; }
         public string Description { get; set; }

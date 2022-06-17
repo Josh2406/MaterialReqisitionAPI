@@ -4,8 +4,6 @@ namespace MaterialRequisition.Application.DTOs.Request
 {
     public class AccountPostRequest 
     {
-        public int? ManagerId { get; set; }
-
         [Required, StringLength(20)]
         public string StaffId { get; set; }
         public int BusinessUnitId { get; set; }

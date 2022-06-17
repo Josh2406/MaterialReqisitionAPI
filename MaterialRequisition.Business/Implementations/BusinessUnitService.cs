@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MaterialRequisition.Business.Implementations
 {
-    public class InventoryService: IInventoryService
+    public class BusinessUnitService: IBusinessUnitService
     {
     }
 }

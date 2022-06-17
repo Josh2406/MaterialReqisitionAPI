@@ -7,7 +7,10 @@ namespace MaterialRequisition.DAL.Entities
     {
         [Key]
         public int Id { get; set; }
-        public int? CreatorId { get; set; }
+        public int? CreatedByUserId { get; set; }
+
+        [StringLength(50)]
+        public string CreatedByUsername { get; set; }
         public int? ManagerId { get; set; }
 
         [Required, StringLength(20)]
@@ -38,9 +41,6 @@ namespace MaterialRequisition.DAL.Entities
 
         [ForeignKey("BusinessUnitId")]
         public virtual BusinessUnit BusinessUnit { get; set; }
-
-        [ForeignKey("CreatorId")]
-        public virtual Account CreatorAccount { get; set; }
 
         [ForeignKey("ManagerId")]
         public virtual Account ManagerAccount { get; set; }

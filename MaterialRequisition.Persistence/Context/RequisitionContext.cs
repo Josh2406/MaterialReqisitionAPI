@@ -10,6 +10,7 @@ namespace MaterialRequisition.Persistence.Context
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<ActivityTimeline> ActivityTimelines { get; set; }
         public virtual DbSet<BusinessUnit> BusinessUnits { get; set; }
+        public virtual DbSet<BusinessUnitManager> BusinessUnitManagers { get; set; }
         public virtual DbSet<InventoryCategory> InventoryCategories { get; set; }
         public virtual DbSet<InventoryItem> InventoryItems { get; set; }
         public virtual DbSet<ItemStock> ItemStocks { get; set; }

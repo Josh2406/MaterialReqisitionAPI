@@ -8,16 +8,10 @@ namespace MaterialRequisition.DAL.Entities
         [Key]
         public int Id { get; set; }
         public int RoleId { get; set; }
-        public int? CreatorId { get; set; }
+        public int? CreatorById { get; set; }
 
         [Required, StringLength(100)]
         public string Name { get; set; }
-
-        [Required, StringLength(50)]
-        public string EntityName { get; set; }
-
-        [Required, StringLength(20)]
-        public string EntityAccess { get; set; }
         public bool IsActive { get; set; }
 
         [Required, StringLength(250)]
@@ -28,7 +22,7 @@ namespace MaterialRequisition.DAL.Entities
         [ForeignKey("RoleId")]
         public virtual Role Role { get; set; }
 
-        [ForeignKey("CreatorId")]
-        public virtual Account CreatorAccount { get; set; }
+        [ForeignKey("CreatorById")]
+        public virtual User CreatedByUser { get; set; }
     }
 }

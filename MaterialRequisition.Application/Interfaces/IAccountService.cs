@@ -18,9 +18,9 @@ namespace MaterialRequisition.Application.Interfaces
         /// Update existing account
         /// </summary>
         /// <param name="accountId">Account UID</param>
-        /// <param name="request">Account Payload</param>
+        /// <param name="request">Edited Account</param>
         /// <returns><see cref="GeneralResponse"/></returns>
-        Task<GeneralResponse> UpdateAccountAsync(int accountId, AccountPostRequest request);
+        Task<GeneralResponse> UpdateAccountAsync(int accountId, AccountResponse request);
 
         /// <summary>
         /// Delete/deactive account

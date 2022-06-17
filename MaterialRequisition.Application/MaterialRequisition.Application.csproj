@@ -6,7 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Interfaces\4kq0o52n.ejg~" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Enums\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

@@ -1,19 +1,27 @@
-﻿using AutoMapper;
-using MaterialRequisition.Business.Automapper;
+﻿using MaterialRequisition.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var config = new MapperConfiguration(cfg =>
-{
-    cfg.AddProfile(new GeneralProfile());
-});
-var mapper = config.CreateMapper();
-builder.Services.AddSingleton(mapper);
-
 // Add services to the container.
+//Register DBContext
+builder.Services.RegisterDbContext(builder.Configuration);
+
+//Services Registration
+builder.Services.RegisterAppServices();
+
+//Swagger Registration
+builder.Services.AddCustomSwaggerGen();
+
+//Register Authentication
+builder.Services.RegisterAuthentication();
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+//Configure Swagger
+app.UseCustomSwaggerUI();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -28,6 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -6,7 +6,7 @@
         public int? CreatorId { get; set; }
         public int? ManagerId { get; set; }
         public string Manager { get; set; }
-        public string CreatedByUser { get; set; }
+        public string CreatedByUsername { get; set; }
         public int BusinessUnitId { get; set; } 
         public string BusinessUnit { get; set; }
         public string FirstName { get; set; }
