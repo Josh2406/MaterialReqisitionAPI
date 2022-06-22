@@ -1,0 +1,51 @@
+﻿using MailKit.Security;
+using MaterialRequisition.Application.DTOs.Request;
+using MaterialRequisition.Application.Interfaces;
+using MaterialRequisition.Application.Settings;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using MimeKit;
+using MailKit.Net.Smtp;
+
+namespace MaterialRequisition.Business.Implementations
+{
+    public class EmailService : IEmailService
+    {
+        private readonly MailSettings _mailSettings;
+        private readonly ILogger<EmailService> _logger;
+
+        public EmailService(IOptions<MailSettings> mailSettings, ILogger<EmailService> logger)
+        {
+            _mailSettings = mailSettings.Value;
+            _logger = logger;
+        }
+
+        public async Task SendAsync(EmailRequest request)
+        {
+            try
+            {
+                // create message
+                var email = new MimeMessage
+                {
+                    Sender = MailboxAddress.Parse(request.From ?? _mailSettings.EmailFrom)
+                };
+                email.To.Add(MailboxAddress.Parse(request.To));
+                email.Subject = request.Subject;
+                var builder = new BodyBuilder
+                {
+                    HtmlBody = request.Body
+                };
+                email.Body = builder.ToMessageBody();
+                using var smtp = new SmtpClient();
+                smtp.Connect(_mailSettings.SmtpHost, _mailSettings.SmtpPort, SecureSocketOptions.StartTls);
+                smtp.Authenticate(_mailSettings.SmtpUser, _mailSettings.SmtpPass);
+                await smtp.SendAsync(email);
+                smtp.Disconnect(true);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error sending mail");
+            }
+        }
+    }
+}

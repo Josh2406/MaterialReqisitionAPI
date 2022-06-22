@@ -8,12 +8,12 @@ using System.Security.Claims;
 
 namespace MaterialRequisition.Business.Implementations
 {
-    public class JWTManager: IJWTManager
+    public class JwtManager : IJwtManager
     {
         private readonly IHttpContextAccessor _contextAccessor;
-        private readonly ILogger<JWTManager> _logger;
+        private readonly ILogger<JwtManager> _logger;
 
-        public JWTManager(IHttpContextAccessor httpContextAccessor, ILogger<JWTManager> logger)
+        public JwtManager(IHttpContextAccessor httpContextAccessor, ILogger<JwtManager> logger)
         {
             _contextAccessor = httpContextAccessor;
             _logger = logger;

@@ -9,13 +9,13 @@ namespace MaterialRequisition.Business.Implementations
 {
     public class UserService : IUserService
     {
-        private readonly IJWTManager _jwtManager;
+        private readonly JwtManager _jwtManager;
         private readonly ILogger<UserService> _logger;
         private readonly RequisitionContext _context;
         private readonly ICachingService _cachingService;
         private readonly IMapper _mapper;
 
-        public UserService(IJWTManager jwtManager, ILogger<UserService> logger, RequisitionContext context, ICachingService cachingService,
+        public UserService(JwtManager jwtManager, ILogger<UserService> logger, RequisitionContext context, ICachingService cachingService,
             IMapper mapper)
         {
             _jwtManager = jwtManager;

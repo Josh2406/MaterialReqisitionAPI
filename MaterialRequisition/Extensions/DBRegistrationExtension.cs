@@ -8,9 +8,14 @@ namespace MaterialRequisition.Extensions
         public static IServiceCollection RegisterDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<RequisitionContext>(options => options.UseSqlServer(configuration.GetConnectionString("RequisitionConnection"),
-                options =>
+                sqlServerOptionsAction: sqlOptions =>
                 {
-                    options.CommandTimeout(20);
+                    sqlOptions.EnableRetryOnFailure
+                    (
+                        maxRetryCount: 10,
+                        maxRetryDelay: TimeSpan.FromSeconds(10),
+                        errorNumbersToAdd: null
+                     );
                 }));
             return services;
         }

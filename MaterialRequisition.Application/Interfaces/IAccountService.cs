@@ -23,7 +23,7 @@ namespace MaterialRequisition.Application.Interfaces
         Task<GeneralResponse> UpdateAccountAsync(int accountId, AccountResponse request);
 
         /// <summary>
-        /// Delete/deactive account
+        /// Delete/deactivate account
         /// </summary>
         /// <param name="accountId">Account UID</param>
         /// <returns></returns>

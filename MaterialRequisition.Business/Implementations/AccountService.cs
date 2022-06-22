@@ -29,7 +29,8 @@ namespace MaterialRequisition.Business.Implementations
 
         public async Task<GeneralResponse> CreateAccountAsync(AccountPostRequest request)
         {
-            _logger.LogInformation(JsonConvert.SerializeObject(request));
+            var json = JsonConvert.SerializeObject(request);
+            _logger.LogInformation("Account Payload >>> {json}", json);
             GeneralResponse result = new();
             try
             {
@@ -144,11 +145,22 @@ namespace MaterialRequisition.Business.Implementations
             GeneralResponse result = new();
             try
             {
-
+                var account = await _context.Accounts.FirstOrDefaultAsync(x => x.Id == accountId);
+                if(account == null)
+                {
+                    result = new GeneralResponse { ResponseCode = ResponseCodes.NOT_FOUND, ResponseMessage = "Account to delete NOT FOUND!" };
+                }
+                else
+                {
+                    account.IsActive = false;
+                    _context.Entry(account).State = EntityState.Modified;
+                    await _context.SaveChangesAsync();
+                    result = new GeneralResponse { ResponseCode = ResponseCodes.SUCCESS, ResponseMessage = "Success" };
+                }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "DeleteAccountAsync() error");
+                _logger.LogError(ex, "DeleteAccountAsync({accountId}) error", accountId);
                 result = new GeneralResponse
                 {
                     Data = new object(),
@@ -162,42 +174,127 @@ namespace MaterialRequisition.Business.Implementations
 
         public async Task<AccountResponse> GetAccountAsync(int accountId)
         {
-            throw new NotImplementedException();
+            AccountResponse accountResponse = new();
+            try
+            {
+                var account = await _context.Accounts.FirstOrDefaultAsync(x => x.Id == accountId);
+                if(account != null)
+                {
+                    accountResponse = _mapper.Map<AccountResponse>(account);
+                }
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "GetAccountAsync({accountId}) error", accountId);
+            }
+            return accountResponse;
         }
 
-        public Task<AccountResponse> GetAccountAsync(string username)
+        public async Task<AccountResponse> GetAccountAsync(string username)
         {
-            throw new NotImplementedException();
+            AccountResponse accountResponse = new();
+            try
+            {
+                var user = await _userService.GetUserAsync(username);
+                if(user != null)
+                {
+                    accountResponse = await GetAccountAsync(user.AccountId);
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetAccountAsync({username}) error", username);
+            }
+            return accountResponse;
         }
 
         public async Task<List<AccountResponse>> GetAccountsByBusinessUnitAsync(int unitId)
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+                var accounts = await _context.Accounts.AsNoTracking().Where(x=>x.BusinessUnitId == unitId).ToListAsync();
+                if(accounts != null && accounts.Any())
+                {
+                    result = _mapper.Map<List<AccountResponse>>(accounts);
+                }
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "GetAccountsByBusinessUnitAsync({unitId}) error", unitId);
+            }
+            return result;
         }
 
         public async Task<List<AccountResponse>> GetAccountsByQueryAsync(string query)
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetAccountsByQueryAsync({query}) error", query);
+            }
+            return result;
         }
 
         public async Task<List<AccountResponse>> GetAccountsCreatedByAsync(string username)
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetAccountsCreatedByAsync({username}) error", username);
+            }
+            return result;
         }
 
         public async Task<List<AccountResponse>> GetActiveAccountsAsync()
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetActiveAccountsAsync() error");
+            }
+            return result;
         }
 
         public async Task<List<AccountResponse>> GetAllAccountsAsync()
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetAllAccountsAsync() error");
+            }
+            return result;
         }
 
         public async Task<List<AccountResponse>> GetPagedAccountAsync(int pageNumber, int pageSize)
         {
-            throw new NotImplementedException();
+            var result = new List<AccountResponse>();
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "GetPagedAccountAsync({pageNumber}, {pageSize}) error", pageNumber, pageSize);
+            }
+            return result;
         }
 
         

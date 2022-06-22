@@ -3,6 +3,7 @@ using MaterialRequisition.Application.Interfaces;
 using MaterialRequisition.Business.Automapper;
 using MaterialRequisition.Business.Implementations;
 using MaterialRequisition.Business.Implementations.Repository;
+using MaterialRequisition.Persistence.ContextFactory;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace MaterialRequisition.Extensions
@@ -25,20 +26,23 @@ namespace MaterialRequisition.Extensions
             //Register HttpContextAccessor
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            //Register DbContextFactory
+            services.AddScoped<IDbContextFactory, DbContextFactory>();
+
             //Register Service Contracts and their Implementations
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped<IJWTManager, JWTManager>();
+            services.AddScoped<IJwtManager, JwtManager>();
             services.AddScoped<ICachingService, CachingService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IActivityService, ActivityService>();
             services.AddScoped<IBusinessUnitService, BusinessUnitService>();
             services.AddScoped<IInventoryService, InventoryService>();
-            services.AddScoped<IJWTManager, JWTManager>();
             services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IRequisitionService, RequsitionService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IStockPostingService, StockPostingService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IEmailService, EmailService>();
 
             return services;
         }

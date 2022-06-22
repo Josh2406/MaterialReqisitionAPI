@@ -15,7 +15,12 @@ builder.Services.AddCustomSwaggerGen();
 //Register Authentication
 builder.Services.RegisterAuthentication();
 
+//Settings
+builder.Services.ConfigureApplicationSettings(builder.Configuration);
+
 builder.Services.AddControllersWithViews();
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 var app = builder.Build();
 
@@ -32,6 +37,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+//Use Swagger
+app.UseCustomSwaggerUI();
 app.UseStaticFiles();
 
 app.UseRouting();

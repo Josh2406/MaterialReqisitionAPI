@@ -1,6 +1,6 @@
 ﻿namespace MaterialRequisition.Application.Interfaces
 {
-    public interface IJWTManager
+    public interface IJwtManager
     {
         /// <summary>
         /// Generate JSON Web Token (JWT) with authentic username
