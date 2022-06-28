@@ -31,12 +31,10 @@ namespace MaterialRequisition.Business.Automapper
                 .ReverseMap();
 
             CreateMap<BusinessUnit, BusinessUnitResponse>()
-                .ForMember(dest => dest.CreatedByUser, src => src.MapFrom(src => src.CreatedBy != null ? src.CreatedBy.Username : ""))
                 .ForMember(dest => dest.ParentUnit, src => src.MapFrom(src => src.ParentUnit != null ? src.ParentUnit.UnitName : ""))
                 .ReverseMap();
 
             CreateMap<InventoryItem, InventoryItemResponse>()
-                .ForMember(dest => dest.CreatedBy, src => src.MapFrom(src => src.CreatedBy != null ? src.CreatedBy.Username : ""))
                 .ForMember(dest => dest.Category, src => src.MapFrom(src => src.InventoryCategory != null ? src.InventoryCategory.CategoryName : ""))
                 .ReverseMap();
 

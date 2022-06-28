@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MaterialRequisition.Application.Constants
+﻿namespace MaterialRequisition.Application.Constants
 {
     public static class ResponseCodes
     {
         public const int SUCCESS = 200;
+        public const int TOKEN_GENERATION_ERROR = 228;
         public const int BAD_REQUEST = 400;
         public const int UNAUTHORIZED = 401;
         public const int FORBIDDEN = 403;

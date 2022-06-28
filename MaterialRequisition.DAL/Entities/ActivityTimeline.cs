@@ -12,14 +12,15 @@ namespace MaterialRequisition.DAL.Entities
         [Required, StringLength(50)]
         public string RecordSchemaName { get; set; }
 
+        [Required, StringLength(100)]
+        public string RecordName { get; set; }
+
         [Required, StringLength(20)]
         public string RecordId { get; set; }
 
         [Required, StringLength(200)]
-        public string Details { get; set; }
+        public string Command { get; set; }
 
-        [Required, StringLength(250)]
-        public string HashStamp { get; set; }
         public DateTime DateCreated { get; set; }
 
         [ForeignKey("AccountId")]

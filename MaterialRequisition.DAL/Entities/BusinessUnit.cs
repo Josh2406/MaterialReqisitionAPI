@@ -8,7 +8,6 @@ namespace MaterialRequisition.DAL.Entities
         [Key]
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public int? CreatedById { get; set; }
 
         [Required, StringLength(20)]
         public string UnitCode { get; set; }
@@ -25,8 +24,5 @@ namespace MaterialRequisition.DAL.Entities
 
         [ForeignKey("ParentId")]
         public virtual BusinessUnit ParentUnit { get; set; }
-
-        [ForeignKey("CreatedById")]
-        public virtual User CreatedBy { get; set; }
     }
 }

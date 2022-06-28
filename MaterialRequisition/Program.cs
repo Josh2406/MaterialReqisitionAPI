@@ -6,17 +6,17 @@ var builder = WebApplication.CreateBuilder(args);
 //Register DBContext
 builder.Services.RegisterDbContext(builder.Configuration);
 
-//Services Registration
-builder.Services.RegisterAppServices();
+////Services Registration
+//builder.Services.RegisterAppServices();
 
-//Swagger Registration
-builder.Services.AddCustomSwaggerGen();
+////Swagger Registration
+//builder.Services.AddCustomSwaggerGen();
 
-//Register Authentication
-builder.Services.RegisterAuthentication();
+////Register Authentication
+//builder.Services.RegisterAuthentication();
 
-//Settings
-builder.Services.ConfigureApplicationSettings(builder.Configuration);
+////Settings
+//builder.Services.ConfigureApplicationSettings(builder.Configuration);
 
 builder.Services.AddControllersWithViews();
 builder.Logging.ClearProviders();

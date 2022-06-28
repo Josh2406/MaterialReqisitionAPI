@@ -43,6 +43,7 @@ namespace MaterialRequisition.Extensions
             services.AddScoped<IStockPostingService, StockPostingService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MaterialRequisition.Application.Interfaces
+﻿namespace MaterialRequisition.Application.Interfaces
 {
     public interface IActivityService
     {
+        Task LogActivity(long recordId, string command, string recordName, string entitySchema);
     }
 }

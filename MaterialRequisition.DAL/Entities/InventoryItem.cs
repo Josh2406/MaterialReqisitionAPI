@@ -8,7 +8,6 @@ namespace MaterialRequisition.DAL.Entities
         [Key]
         public int Id { get; set; }
         public int CategoryId { get; set; }
-        public int? CreatedById { get; set; }
 
         [Required, StringLength(50)]
         public string ItemName { get; set; }
@@ -24,8 +23,5 @@ namespace MaterialRequisition.DAL.Entities
 
         [ForeignKey("CategoryId")]
         public virtual InventoryCategory InventoryCategory { get; set; }
-
-        [ForeignKey("CreatedById ")]
-        public virtual User CreatedBy { get; set; }
     }
 }

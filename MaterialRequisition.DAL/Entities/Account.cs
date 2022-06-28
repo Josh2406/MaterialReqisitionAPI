@@ -7,10 +7,6 @@ namespace MaterialRequisition.DAL.Entities
     {
         [Key]
         public int Id { get; set; }
-        public int? CreatedByUserId { get; set; }
-
-        [StringLength(50)]
-        public string CreatedByUsername { get; set; }
         public int? ManagerId { get; set; }
 
         [Required, StringLength(20)]
